@@ -360,16 +360,41 @@ body {
     display: none;
 }
 
-/* Quando a tela for celular (máximo 768px) */
+/* RESPONSIVIDADE MOBILE (<= 768px) */
 @media (max-width: 768px) {
-    .foto-Perfil-Desktop {
-        display: none; /* Some com a foto da sidebar */
+    .sidebar {
+        display: none; /* Esconde a barra lateral */
     }
     
-    .foto-Perfil-Mobile {
-        display: block; /* Faz a foto mobile aparecer no topo */
-        width: 100px;
-        height: 100px;
-        margin: 20px auto; /* Centraliza na tela do celular */
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 30px 20px;
+    }
+    
+    .page-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    /* === NOVA LOGICA PARA EXIBIR TUDO NO MOBILE === */
+    .content-section {
+        display: block !important; /* Força todas as seções a aparecerem */
+        margin-bottom: 60px;       /* Cria um espaço elegante entre uma seção e outra */
+        border-bottom: 1px solid var(--border-color); /* Linha sutil separando as seções */
+        padding-bottom: 40px;
+    }
+
+    /* Remove a linha separadora apenas da última seção (Contato) */
+    .content-section:last-of-type {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
     }
 }
