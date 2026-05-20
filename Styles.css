@@ -62,14 +62,14 @@ body {
     object-fit: cover;
 }
 
-.sidebar-nav ul {
+.sidebar-Nav ul {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.sidebar-nav a {
+.sidebar-Nav a {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -81,20 +81,20 @@ body {
     font-size: 0.95rem;
 }
 
-.sidebar-nav a i {
+.sidebar-Nav a i {
     width: 20px;
     color: var(--text-muted);
 }
 
 /* Estado ativo e hover do menu */
-.sidebar-nav a:hover, 
-.sidebar-nav a.active {
+.sidebar-Nav a:hover, 
+.sidebar-Nav a.active {
     background-color: rgba(69, 220, 168, 0.1);
     color: var(--accent);
 }
 
-.sidebar-nav a:hover i, 
-.sidebar-nav a.active i {
+.sidebar-Nav a:hover i, 
+.sidebar-Nav a.active i {
     color: var(--accent);
 }
 
@@ -335,7 +335,7 @@ body {
     color: var(--accent);
 }
 
-/* Tudo o que estiver aqui dentro SÓ vai funcionar em telas de até 768px */
+/*Funcionar <= 768px*/
 @media (max-width: 768px) {
     .sidebar {
         display: none; /* Esconde a barra lateral no mobile */
