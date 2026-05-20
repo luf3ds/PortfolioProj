@@ -362,6 +362,18 @@ body {
 
 /* RESPONSIVIDADE MOBILE (<= 768px) */
 @media (max-width: 768px) {
+
+    .foto-Perfil-Desktop {
+        display: none; /* Some com a foto da sidebar */
+    }
+    
+    .foto-Perfil-Mobile {
+        display: block; /* Faz a foto mobile aparecer no topo */
+        width: 100px;
+        height: 100px;
+        margin: 20px auto; /* Centraliza na tela do celular */
+    }
+
     .sidebar {
         display: none; /* Esconde a barra lateral */
     }
