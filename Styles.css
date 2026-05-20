@@ -1,0 +1,348 @@
+/*VARIÁVEIS E GERAL*/
+:root {
+    --bg-main: #141b25;      /* Fundo escuro*/
+    --bg-sidebar: #1a232f;   /* Barra lateral */
+    --bg-card: #1f2937;      /* Cards e fundo de barras */
+    --accent: #45dca8;       /* Verde-água principal */
+    --accent-hover: #36b88b; 
+    --text-main: #f3f4f6;
+    --text-muted: #9ca3af;
+    --border-color: #2d3748;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth; /* Deslize suave ao navegar */
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+/*BARRA LATERAL*/
+.sidebar {
+    width: 260px;
+    background-color: var(--bg-sidebar);
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    border-right: 1px solid var(--border-color);
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    top: 0;
+}
+
+.perfil-Secao {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.foto-Perfil {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    border: 3px solid var(--accent);
+    overflow: hidden;
+    background-color: var(--bg-card);
+}
+
+.foto-Perfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: var(--text-main);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.sidebar-nav a i {
+    width: 20px;
+    color: var(--text-muted);
+}
+
+/* Estado ativo e hover do menu */
+.sidebar-nav a:hover, 
+.sidebar-nav a.active {
+    background-color: rgba(69, 220, 168, 0.1);
+    color: var(--accent);
+}
+
+.sidebar-nav a:hover i, 
+.sidebar-nav a.active i {
+    color: var(--accent);
+}
+
+.social-links {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a {
+    color: var(--text-muted);
+    font-size: 1.3rem;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent);
+    transform: translateY(-3px);
+}
+
+/* ===================================================
+   CONTEÚDO PRINCIPAL
+   =================================================== */
+.main-content {
+    margin-left: 260px; /* Espaço da sidebar */
+    padding: 50px 60px;
+    width: calc(100% - 260px);
+    min-height: 100vh;
+}
+
+/* Sistema de Abas (JS) */
+.content-section {
+    display: none; /* Escondido por padrão, JS mostra o selecionado */
+    animation: fadeIn 0.5s ease;
+}
+
+/* Mostrar a primeira seção (ou a ativa) */
+#Tecnologias {
+    display: block; 
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+}
+
+.header-text h1 span {
+    color: var(--accent);
+}
+
+.btn-download {
+    background-color: var(--accent);
+    color: #141b25;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.btn-download:hover {
+    background-color: var(--accent-hover);
+    transform: scale(1.05);
+}
+
+/*GRID DE TECNOLOGIAS (3 COLUNAS)*/
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.skill-column {
+    flex: 1;
+    min-width: 280px;
+}
+
+.skill-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    color: #fff;
+    position: relative;
+}
+
+.skill-item {
+    margin-bottom: 20px;
+}
+
+.skill-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.skill-info i {
+    font-size: 1.4rem;
+    color: var(--accent); /* Ícones do Devicon ficam verdes */
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background-color: var(--bg-card);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--accent);
+    border-radius: 10px;
+}
+
+/* ===================================================
+   CARDS DE EXPERIÊNCIA E FORMAÇÃO
+   =================================================== */
+.project-card {
+    background-color: var(--bg-sidebar);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project-card h3 {
+    margin-bottom: 5px;
+}
+
+/* ===================================================
+   RESPONSIVIDADE
+   =================================================== */
+@media (max-width: 992px) {
+    .skills-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 30px 20px;
+    }
+    .page-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
+
+/*SECÇÃO DE CONTATO*/
+
+/* Container do card de contacto */
+.contact-card {
+    max-width: 600px;
+    background-color: var(--bg-sidebar); /* Fundo ligeiramente diferente para destacar */
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 40px !important;
+    margin-top: 20px;
+}
+
+/* Remove as bolinhas da lista e organiza o espaçamento */
+.contact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Espaço entre cada linha de contacto */
+}
+
+/* Estilização do link de contacto */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaço entre ícone e texto */
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+/* Estilo dos ícones de contacto */
+.contact-item i {
+    font-size: 1.6rem;
+    color: var(--accent); /* O verde-água que definiu */
+    width: 35px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+/* Efeito Hover: O texto fica verde e a linha "anda" para o lado */
+.contact-item:hover {
+    color: var(--accent);
+    transform: translateX(10px);
+}
+
+.contact-item:hover i {
+    transform: scale(1.2); /* O ícone cresce um pouco no hover */
+}
+
+/* Ajuste para o texto muted caso queiras um visual mais discreto antes do hover */
+.contact-item span {
+    color: var(--text-muted);
+    transition: 0.3s;
+}
+
+.contact-item:hover span {
+    color: var(--accent);
+}
+
+/* Tudo o que estiver aqui dentro SÓ vai funcionar em telas de até 768px */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none; /* Esconde a barra lateral no mobile */
+    }
+    
+    .main-content {
+        margin-left: 100; /* Remove o espaço da barra lateral no mobile */
+        padding: 5%;
+    }
+}
