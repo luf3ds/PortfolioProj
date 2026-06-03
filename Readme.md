@@ -1,36 +1,83 @@
-# 💻 Portfólio - Lufe DS
+# 💻 Portfolio - Lufe DS
 
-Projeto de portfólio pessoal desenvolvido para apresentar minhas habilidades como desenvolvedor Full Stack, com foco em design moderno, responsividade e organização de conteúdo.
-
----
-
-## 🚀 Funcionalidades
-
-- 👤 Perfil profissional com foto  
-- 📊 Exibição de habilidades com barras de progresso  
-- 🧠 Organização por categorias (Back-end, Front-end, etc.)  
-- 💼 Seção de experiência profissional  
-- 📄 Download de currículo em PDF  
-- 📬 Links diretos para contato (Email, WhatsApp, LinkedIn, GitHub)  
-- 📱 Layout responsivo  
+Personal portfolio project developed to showcase my skills as a Full Stack Developer, with a focus on modern design, responsiveness, and well-structured content organization.
 
 ---
 
-## 🧠 Estrutura do Sistema
+## 🚀 Features
 
-O projeto segue uma estrutura simples e eficiente baseada em separação de responsabilidades:
-
-- HTML responsável pela estrutura da página :contentReference[oaicite:0]{index=0}  
-- CSS responsável pela estilização e responsividade :contentReference[oaicite:1]{index=1}  
+* 👤 Professional profile with photo
+* 📊 Skills showcase with progress bars
+* 🧠 Categorized technologies and competencies (Back-end, Front-end, etc.)
+* 💼 Professional experience section
+* 📄 PDF resume download
+* 📬 Direct contact links (Email, WhatsApp, LinkedIn, GitHub)
+* 📱 Fully responsive layout
 
 ---
 
-## 🏗️ Estrutura do Projeto
+## 🧠 System Architecture
+
+The project follows a simple and efficient structure based on separation of concerns:
+
+* **HTML** is responsible for the page structure and content.
+* **CSS** is responsible for styling, layout, and responsiveness.
+
+---
+
+## 🏗️ Project Structure
 
 ```bash
-📦 portfolio
- ┣ 📂 fotos
- ┃ ┣ 📜 foto.jpeg
- ┃ ┗ 📜 Currículo - Desenvolvedor.pdf
+📦 portfolio-website
+ ┣ 📂 assets
+ ┃ ┣ 📜 profile-photo.jpeg
+ ┃ ┗ 📜 Resume.pdf
  ┣ 📜 index.html
- ┗ 📜 Styles.css
+ ┗ 📜 styles.css
+```
+
+---
+
+## 🛠️ Technologies Used
+
+* HTML5
+* CSS3
+* Responsive Design
+* Flexbox
+* CSS Grid
+
+---
+
+## 🎯 Objectives
+
+This project was created to:
+
+* Showcase my technical skills and projects.
+* Practice front-end development concepts.
+* Improve responsive web design techniques.
+* Build a professional online presence.
+
+---
+
+## 📷 Preview
+
+The portfolio includes sections for:
+
+* About Me
+* Skills
+* Professional Experience
+* Contact Information
+* Resume Download
+
+---
+
+## 👨‍💻 Author
+
+**Luis Felipe Dias de Souza**
+
+Software Development student focused on Full Stack Development, databases, and software engineering. Passionate about building scalable applications and continuously improving technical skills through hands-on projects.
+
+* GitHub: https://github.com/luf3ds
+* LinkedIn: https://www.linkedin.com/in/luis-felipe-dias-s-155b84378/
+* Email: [lufeds@outlook.com](mailto:lufeds@outlook.com)
+
