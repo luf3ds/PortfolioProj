@@ -75,8 +75,6 @@ The portfolio includes sections for:
 
 **Luis Felipe Dias de Souza**
 
-Software Development student focused on Full Stack Development, databases, and software engineering. Passionate about building scalable applications and continuously improving technical skills through hands-on projects.
-
 * GitHub: https://github.com/luf3ds
 * LinkedIn: https://www.linkedin.com/in/luis-felipe-dias-s-155b84378/
 * Email: [lufeds@outlook.com](mailto:lufeds@outlook.com)
